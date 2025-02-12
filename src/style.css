@@ -8,13 +8,15 @@ body{
 }
 .card{
     width: 400px;
-    border-radius: 10%;
+    border-radius: 7.5%;
     background-color: #282828;
 }
 .card > img{
-    border-radius: 10%;
+    width: 400px;
+    border-radius: 7.5%;
 }
 .moreLessBtn{
+    margin: 0 0 12.5px 12.5px;
     transition: all 0.3s;
     background-color: #fff;
     padding: 7.5px;

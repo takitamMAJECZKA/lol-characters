@@ -1,5 +1,5 @@
 import Gallery from "./Gallery";
-import { useState, useContext, useEffect, use } from "react";
+import { useState, useContext, useEffect,} from "react";
 
 
 export default function Card( {character} ){
@@ -9,7 +9,6 @@ export default function Card( {character} ){
 
     let [pOpened, setPOpened] = useState(false)
     const paragraphStyles = {WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', display: '-webkit-box'}
-
     switch (character){
         case "Akali":
             description = "Opuściwszy Zakon Kinkou i wyzbywszy się tytułu Pięści Cienia, Akali działa w pojedynkę, gotowa stać się śmiercionośną bronią, której jej lud tak bardzo potrzebował. Choć nie wyrzekła się wiedzy, którą przekazał jej mistrz Shen, poprzysięgła zabijać wrogów Ionii jednego po drugim. Akali uderza wprawdzie w niczym niezmąconej ciszy, ale jej przesłanie rozbrzmiewa z wielką mocą: bój się zabójczyni bez mistrza.";
@@ -22,7 +21,7 @@ export default function Card( {character} ){
             break;
     }
     return(<div className="card">
-        <img src={image} width='400'/>
+        <img src={image}/>
         <h2>{character}</h2>
         <p style={pOpened ? null : paragraphStyles}>{description}</p>
         <button className="moreLessBtn" onClick={() => {setPOpened(!pOpened)}}>{pOpened ? "Read less.." : "Read more..."}</button>
