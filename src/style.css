@@ -1,0 +1,30 @@
+body{
+    background-color: #3b3b3b;
+    color: #ffffffab;
+}
+#root{
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    width: 400px;
+    border-radius: 10%;
+    background-color: #282828;
+}
+.card > img{
+    border-radius: 10%;
+}
+.moreLessBtn{
+    transition: all 0.3s;
+    background-color: #fff;
+    padding: 7.5px;
+    border: solid #282828 1px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.moreLessBtn:hover{
+    border: solid #1b1b1b 1px;
+}
+.moreLessBtn:active{
+    border: solid #090909 1px;
+}
