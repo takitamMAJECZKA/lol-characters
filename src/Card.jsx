@@ -1,5 +1,5 @@
 import Gallery from "./Gallery";
-import { useState, useEffect, createContext,} from 'react';
+import { useState, createContext,} from 'react';
 
 export let characterContext = createContext();
 
@@ -8,7 +8,7 @@ export default function Card( {character} ){
     const paragraphStyles = {WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', display: '-webkit-box'}
 
 
-    let [image, setImage] = useState(`./src/assets/${character+1}.jpg`)
+    let [image, setImage] = useState(`/src/assets/${character+1}.jpg`)
     let description;
 
     let [pOpened, setPOpened] = useState(false)
@@ -24,7 +24,7 @@ export default function Card( {character} ){
             break;
     }
     function getImageFromChild(choosedImage){
-        setImage(`./src/assets/${character+choosedImage}.jpg`)
+        setImage(`/src/assets/${character+choosedImage}.jpg`)
     }
     return(<div className="card">
         <img className="profileImg" src={image} />
