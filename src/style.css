@@ -1,3 +1,6 @@
+*{
+    transition: all 0.2s;
+}
 body{
     background-color: #3b3b3b;
     color: #ffffffab;
@@ -5,15 +8,35 @@ body{
 #root{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 .card{
     width: 400px;
-    border-radius: 7.5%;
+    align-self: flex-start;
+    border-radius: 20px;
     background-color: #282828;
+    padding: 15px;
 }
-.card > img{
+.profileImg{
     width: 400px;
     border-radius: 7.5%;
+}
+.galleryContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.galleryImg{
+    width: 150px;
+    border-radius: 10%;
+    cursor: pointer;
+}
+.galleryImg:hover{
+    border: 3px #ffffff9d solid;
+}
+.galleryImg.active{
+    border: 3px #ffffff9d solid;
 }
 .moreLessBtn{
     margin: 0 0 12.5px 12.5px;
@@ -29,4 +52,17 @@ body{
 }
 .moreLessBtn:active{
     border: solid #090909 1px;
+}
+
+@media only screen and (max-width: 1290px) {
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    #root{
+        display: block;
+    }
+    .card{
+        margin-bottom: 30px;
+    }
 }
