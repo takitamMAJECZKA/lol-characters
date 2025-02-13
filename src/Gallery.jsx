@@ -8,5 +8,9 @@ import neeko2 from './assets/Neeko2.jpg'
 
 
 export default function Gallery(){
-
+    
+    return(<>
+<img src={}>
+<img src={}>
+</>)
 }
