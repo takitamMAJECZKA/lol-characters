@@ -7,7 +7,7 @@ export default function Gallery( {sendChoosedImage} ){
     
 
 return(<div className='galleryContainer'>
-    <img src={`./assets/${character+1}.jpg`} className='galleryImg' onClick={() => {sendChoosedImage(1)}}/>
-    <img src={`./assets/${character+2}.jpg`} className='galleryImg' onClick={() =>{sendChoosedImage(2)}}/>
+    <img src={`../src/assets/${character+1}.jpg`} className='galleryImg' onClick={() => {sendChoosedImage(1)}}/>
+    <img src={`../src/assets/${character+2}.jpg`} className='galleryImg' onClick={() =>{sendChoosedImage(2)}}/>
 </div>)
 }
