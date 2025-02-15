@@ -1,6 +1,13 @@
 import Gallery from "./Gallery";
 import { useState, createContext,} from 'react';
 
+import Akali1 from './assets/Akali1.jpg'
+import Akali2 from './assets/Akali2.jpg'
+import Kennen1 from './assets/Kennen1.jpg'
+import Kennen2 from './assets/Kennen2.jpg'
+import Neeko1 from './assets/Neeko1.jpg'
+import Neeko2 from './assets/Neeko2.jpg'
+
 export let characterContext = createContext();
 
 
@@ -8,7 +15,7 @@ export default function Card( {character} ){
     const paragraphStyles = {WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', display: '-webkit-box'}
 
 
-    let [image, setImage] = useState(`../src/assets/${character+1}.jpg`)
+    let [image, setImage] = useState(eval(character+1))
     let description;
 
     let [pOpened, setPOpened] = useState(false)
@@ -23,8 +30,8 @@ export default function Card( {character} ){
             description = "Kennen jest kimś więcej niż błyskawicznie szybkim stróżem ioniańskiej równowagi, jest jedynym yordlowym członkiem zakonu Kinkou. Mimo że jest małym i włochatym stworzeniem, chętnie stawi czoła wszystkim zagrożeniom za pomocą wirującej burzy shurikenów i dzięki niekończącemu się entuzjazmowi. U boku swojego mistrza Shena, Kennen patroluje duchowy wymiar, używając niszczącej elektrycznej energii, by zabijać wrogów.";
             break;
     }
-    function getImageFromChild(choosedImage){
-        setImage(`../src/assets/${character+choosedImage}.jpg`)
+    function getImageFromChild(choosedImageNum){
+        setImage(eval(character+choosedImageNum))
     }
     return(<div className="card">
         <img className="profileImg" src={image} />
